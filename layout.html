@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        body{
+            font-family:sans-serif;
+            margin:0;
+            color:white;
+        }
+        #wrapper{
+            display:flex;
+            flex-flow:row wrap;
+            text-align:center;
+            margin:0;
+        }
+        #section{
+            background-color:rgb(43, 43, 92);
+            text-align:left;
+        }
+        #header_1{
+            background-color:rgb(54, 51, 51);
+        }
+        #header_2{
+            background-color: rgb(85, 72, 72);
+        }
+        #header{
+            background-color:rgb(29, 54, 92) ;
+        }
+        #footer{
+            background-color: rgb(47, 112, 47);
+        }
+        #header, #footer{
+            flex-basis:100%;
+        }
+        .header{
+            flex-basis:auto;
+            flex-grow;1;
+        }
+        #section{
+            flex-grow:5;
+            flex-basis:0%;
+        }
+        #section, #header_1, #header_2{
+            padding :8px;
+        }
+        #section>h2{
+            text-align:center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <h2>Header</h2>
+        </header>
+        <aside class="header" id="header_1">
+            <h2>Aside</h2>
+        </aside>
+        <section id="section">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+        </section>
+        <aside class="header" id="header_2">
+            <h2>Aside 2</h2>
+        </aside>
+        <footer id="footer">
+            <h2>Footer</h2>
+        </footer>
+    </div>
+</body>
+</html>
